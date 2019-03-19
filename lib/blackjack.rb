@@ -42,7 +42,7 @@ def hit?(card_total)
     prompt_user
     input = get_user_input
     if input == "s"
-      card_total
+      hit?(card_total)
     elsif input == "h"
       card_total += deal_card
     else invalid_command
@@ -63,9 +63,9 @@ end
 def runner
   welcome
   total = initial_round
-  until card_total > 21
-    hit?(card_total)
+  until total > 21
+    hit?(total)
   end 
-end_game
+end_game(total)
 end
     
