@@ -71,3 +71,4 @@ def welcome
   end_game(total)
   end
     
+runner
